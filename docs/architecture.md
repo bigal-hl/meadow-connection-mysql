@@ -111,7 +111,7 @@ sequenceDiagram
 	App->>Fable: addServiceType('MeadowMySQLProvider', ...)
 	App->>Fable: instantiateServiceProvider('MeadowMySQLProvider')
 	Fable->>MCS: constructor(fable, manifest, hash)
-	MCS->>MCS: Coerce config (PascalCase → camelCase)
+	MCS->>MCS: Coerce config (PascalCase -> camelCase)
 	MCS->>MCS: Force namedPlaceholders = true
 
 	alt Auto-Connect Enabled
@@ -254,6 +254,6 @@ The connection pool is shared across all Meadow entities in the application. Eac
 | Named Placeholders | Yes | Yes | Yes | N/A |
 | Auto-Connect | Yes | No | No | No |
 | DDL Generation | Yes | Yes | No | No |
-| Config Coercion | PascalCase → camelCase | N/A | N/A | N/A |
+| Config Coercion | PascalCase -> camelCase | N/A | N/A | N/A |
 | Connection Guard | Double-connect prevention | N/A | N/A | N/A |
 | Underlying Library | mysql2 | tedious | better-sqlite3 | rocksdb |

@@ -111,7 +111,7 @@ let fable = new libFable(
 
 ### `connect()`
 
-Create the MySQL connection pool synchronously. Guards against double-connect — calling `connect()` on an already-connected instance logs an error and skips pool creation.
+Create the MySQL connection pool synchronously. Guards against double-connect -- calling `connect()` on an already-connected instance logs an error and skips pool creation.
 
 ### `connectAsync(fCallback)`
 
