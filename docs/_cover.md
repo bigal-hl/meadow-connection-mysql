@@ -1,7 +1,5 @@
 # Meadow Connection MySQL
 
-<small>v1.0.8</small>
-
 > MySQL connection pooling as a Fable service
 
 A lightweight wrapper around [mysql2](https://github.com/sidorares/node-mysql2) that manages connection pooling, supports auto-connect, and integrates with Meadow for provider-based data access. Register once, query from anywhere.
