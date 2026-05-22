@@ -1,7 +1,7 @@
 {
 	"Name": "meadow-connection-mysql",
-	"Version": "1.0.15",
+	"Version": "1.0.19",
 	"Description": "Meadow MySQL Plugin",
-	"GeneratedAt": "2026-04-10T17:20:46.154Z",
-	"GitCommit": "191dc1a"
+	"GeneratedAt": "2026-05-22T05:39:36.838Z",
+	"GitCommit": "5391919"
 }
