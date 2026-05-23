@@ -176,5 +176,5 @@ Meadow Connection MySQL sits between the Meadow ORM layer and the MySQL server. 
 - [Architecture](architecture.md) -- Design, data flow, and component responsibilities
 - [Schema & Table Creation](schema.md) -- Generate MySQL tables from Meadow schemas
 - [API Reference](api/reference.md) -- Complete method and property documentation
-- [Meadow](/meadow/meadow/) -- The data access layer
-- [FoxHound](/meadow/foxhound/) -- Query DSL used by Meadow
+- [Meadow](https://stevenvelozo.github.io/meadow/) -- The data access layer
+- [FoxHound](https://stevenvelozo.github.io/foxhound/) -- Query DSL used by Meadow
