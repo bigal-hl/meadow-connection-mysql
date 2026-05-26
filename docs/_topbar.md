@@ -5,4 +5,4 @@
 - [Architecture](architecture.md)
 - [Schema & Tables](schema.md)
 - [API Reference](api/reference.md)
-- [GitHub](https://github.com/stevenvelozo/meadow-connection-mysql)
+- [GitHub](https://github.com/fable-retold/meadow-connection-mysql)
