@@ -4,9 +4,7 @@
 
 A MySQL connection pool provider for the Meadow ORM. Wraps [mysql2](https://github.com/sidorares/node-mysql2) as a Fable service, providing connection pooling with named placeholders, auto-connect support, and DDL generation from Meadow table schemas.
 
-[![Build Status](https://github.com/fable-retold/meadow-connection-mysql/workflows/Meadow-Connection-MySQL/badge.svg)](https://github.com/fable-retold/meadow-connection-mysql/actions)
-[![npm version](https://badge.fury.io/js/meadow-connection-mysql.svg)](https://badge.fury.io/js/meadow-connection-mysql)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[meadow-connection-mysql on npm](https://www.npmjs.com/package/meadow-connection-mysql) | [MIT License](LICENSE)
 
 ---
 
