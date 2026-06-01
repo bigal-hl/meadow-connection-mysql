@@ -1,6 +1,6 @@
 # Meadow Connection MySQL
 
-> **[&#9654; Read the Meadow-Connection-Mysql Documentation](https://fable-retold.github.io/meadow-connection-mysql/)** &mdash; interactive docs with the full API reference.
+> **[Read the Meadow-Connection-Mysql Documentation](https://fable-retold.github.io/meadow-connection-mysql/)** - interactive docs with the full API reference.
 
 A MySQL connection pool provider for the Meadow ORM. Wraps [mysql2](https://github.com/sidorares/node-mysql2) as a Fable service, providing connection pooling with named placeholders, auto-connect support, and DDL generation from Meadow table schemas.
 
