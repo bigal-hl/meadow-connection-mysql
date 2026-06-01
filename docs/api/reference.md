@@ -6,7 +6,7 @@ Complete method and property documentation for `MeadowConnectionMySQL`.
 
 ## Class: MeadowConnectionMySQL
 
-Extends `FableServiceProviderBase` from [fable-serviceproviderbase](https://github.com/fable-retold/fable-serviceproviderbase).
+Extends `FableServiceProviderBase` from [fable-serviceproviderbase](https://fable-retold.github.io/fable-serviceproviderbase/).
 
 ```javascript
 const libMeadowConnectionMySQL = require('meadow-connection-mysql');
