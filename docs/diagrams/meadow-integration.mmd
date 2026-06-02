@@ -1,0 +1,18 @@
+sequenceDiagram
+	participant App as Application
+	participant Meadow as Meadow Entity
+	participant FH as FoxHound
+	participant Provider as Meadow-Provider-MySQL
+	participant MCS as MeadowConnectionMySQL
+	participant Pool as mysql2 Pool
+
+	App->>Meadow: doReads(query, callback)
+	Meadow->>FH: Build SQL query
+	FH-->>Meadow: SQL string + parameters
+	Meadow->>Provider: Execute read
+	Provider->>MCS: Get pool reference
+	MCS-->>Provider: mysql2 pool
+	Provider->>Pool: pool.query(sql, params)
+	Pool-->>Provider: Result rows
+	Provider-->>Meadow: Marshalled records
+	Meadow-->>App: callback(error, query, records)

@@ -1,0 +1,7 @@
+flowchart TD
+	A[connect called] --> B{Pool already exists?}
+	B -->|Yes| C[Log error with cleansed settings]
+	C --> D[Skip -- no new pool created]
+	B -->|No| E[Create mysql2 pool]
+	E --> F[Set connected = true]
+	F --> G[Log connection details]

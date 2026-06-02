@@ -1,0 +1,28 @@
+graph LR
+	subgraph Meadow Style
+		A1["Server"]
+		A2["Port"]
+		A3["User"]
+		A4["Password"]
+		A5["Database"]
+		A6["ConnectionPoolLimit"]
+	end
+
+	subgraph mysql2 Native
+		B1["host"]
+		B2["port"]
+		B3["user"]
+		B4["password"]
+		B5["database"]
+		B6["connectionLimit"]
+	end
+
+	A1 --> B1
+	A2 --> B2
+	A3 --> B3
+	A4 --> B4
+	A5 --> B5
+	A6 --> B6
+
+	style Meadow Style fill:#f5f0e8,stroke:#423D37
+	style mysql2 Native fill:#e8f4f8,stroke:#2E7D74

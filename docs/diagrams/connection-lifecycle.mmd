@@ -1,0 +1,30 @@
+sequenceDiagram
+	participant App as Application
+	participant Fable as Fable Instance
+	participant MCS as MeadowConnectionMySQL
+	participant Pool as mysql2 Pool
+	participant MySQL as MySQL Server
+
+	App->>Fable: new libFable(config)
+	App->>Fable: addServiceType('MeadowMySQLProvider', ...)
+	App->>Fable: instantiateServiceProvider('MeadowMySQLProvider')
+	Fable->>MCS: constructor(fable, manifest, hash)
+	MCS->>MCS: Coerce config (PascalCase -> camelCase)
+	MCS->>MCS: Force namedPlaceholders = true
+
+	alt Auto-Connect Enabled
+		MCS->>MCS: connect()
+		MCS->>Pool: mysql2.createPool(settings)
+		Pool->>MySQL: Establish TCP connections
+		MCS-->>MCS: connected = true
+	end
+
+	App->>MCS: connect() or connectAsync()
+	MCS->>Pool: mysql2.createPool(settings)
+	Pool->>MySQL: Establish TCP connections
+	MCS-->>App: Pool ready (callback or sync)
+
+	App->>Pool: pool.query(sql, params, callback)
+	Pool->>MySQL: Execute query
+	MySQL-->>Pool: Result set
+	Pool-->>App: (error, rows, fields)

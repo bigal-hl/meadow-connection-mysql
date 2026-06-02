@@ -1,0 +1,15 @@
+flowchart TD
+	A[Constructor Called] --> B{options.MySQL exists?}
+	B -->|Yes| C[Use options.MySQL directly]
+	B -->|No| D{fable.settings.MySQL exists?}
+	D -->|Yes| E[Build config from fable.settings]
+	D -->|No| F[No MySQL config available]
+	C --> G{Has PascalCase props?}
+	G -->|Yes| H[Coerce to camelCase]
+	G -->|No| I[Use as-is]
+	H --> J[Force namedPlaceholders = true]
+	I --> J
+	E --> J
+	J --> K{AutoConnect enabled?}
+	K -->|Yes| L[Call connect immediately]
+	K -->|No| M[Wait for explicit connect call]
